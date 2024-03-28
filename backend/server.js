@@ -26,7 +26,7 @@ app.use("/api/users", userRoutes)
 app.use(express.static(path.join(__dirname, "/frontend/chatty/dist")))
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "chatty", "dist", "index.html"))
+    res.sendFile(path.join(__dirname, "frontend", "chatty", "dist", "assets", "index.html"))
 })
 
 server.listen(PORT, () => {
